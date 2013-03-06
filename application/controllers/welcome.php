@@ -29,10 +29,11 @@
 			{
 				$this -> load -> model('thought_model');
 				$thoughts = $this -> thought_model -> get_all_thought_ids();
-				
+				print_r($thoughts);
+				echo "<br/>";
 				$data = array(
 					'visited' => 1,
-					'thought' => random_element('id',$thoughts)
+					'thought' => random_element($thoughts)
 				);
 
 				$this -> session -> set_userdata($data);
