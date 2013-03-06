@@ -49,7 +49,7 @@
 			$data['thought'] = $this -> thought_model -> get_thought($storedID);
 		
 			$this->load->vars($data);
-			$this -> load -> view('welcome_message');
+			$this -> load -> view('template');
 		}
 
 	}
