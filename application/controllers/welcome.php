@@ -24,27 +24,33 @@
 		{
 
 			$visited = $this -> session -> userdata('visited');
-				$this -> load -> model('thought_model');
-				$thoughts = $this -> thought_model -> get_random_id();
-				foreach($thoughs as $row):
-					
-					echo $row->id;
-				endforeach;
+			$this -> load -> model('thought_model');
 
 			if ($visited != 1)
 			{
-			
-				
+
+				$thoughts = $this -> thought_model -> get_random_id();
+				foreach ($thoughts as $row):
+
+					$thought_id = $row -> id;
+				endforeach;
+
 				$data = array(
 					'visited' => 1,
-					'thought' => 111
+					'thought' => $thought_id
 				);
 
 				$this -> session -> set_userdata($data);
 
 			}
-			$number = $this -> session -> userdata('thought');
-			echo $number;
+			$storedID = $this -> session -> userdata('thought');
+
+			$thought = $this -> thought_model -> get_thought($storedID);
+			foreach ($thought as $row):
+
+				echo $row -> thought;
+			endforeach;
+
 			$this -> load -> view('welcome_message');
 		}
 

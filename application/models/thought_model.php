@@ -34,6 +34,7 @@
 		{
 			$this -> db -> select('id');
 			$this -> db -> order_by ('id', 'random');
+			$this -> db -> limit (1);
 			$query = $this -> db -> get('thoughts');
 
 			if ($query -> num_rows > 0)
