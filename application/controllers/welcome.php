@@ -22,20 +22,17 @@
 		 */
 		public function index()
 		{
-			$this -> load -> model('thought_model');
-			$thoughts = $this -> thought_model -> get_all_thought_ids();
-			
-			print_r($thoughts);
-		
 
 			$visited = $this -> session -> userdata('visited');
 
 			if ($visited != 1)
 			{
-
+				$this -> load -> model('thought_model');
+				$thoughts = $this -> thought_model -> get_all_thought_ids();
+				
 				$data = array(
 					'visited' => 1,
-					'thought' => random_string('numeric', 3)
+					'thought' => random_element($thoughts)
 				);
 
 				$this -> session -> set_userdata($data);
