@@ -14,6 +14,8 @@
     <link href="<?=base_url()?>css/bootstrap-responsive.css" rel="stylesheet">
      <link href="<?=base_url()?>css/styles.css" rel="stylesheet">
  
+<link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
