@@ -32,7 +32,7 @@
 				
 				$data = array(
 					'visited' => 1,
-					'thought' => random_element($thoughts)
+					'thought' => random_element('id',$thoughts)
 				);
 
 				$this -> session -> set_userdata($data);
