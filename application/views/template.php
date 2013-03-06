@@ -65,8 +65,7 @@
           <img src="<?=base_url()?>img/examples/slide-01.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>"
-<?=$this->load->view('welcome_message')?>"</h1>
+              <h1><?=$this->load->view('welcome_message')?></h1>
              
             </div>
           </div>
