@@ -24,13 +24,17 @@
 		{
 
 			$visited = $this -> session -> userdata('visited');
+				$this -> load -> model('thought_model');
+				$thoughts = $this -> thought_model -> get_random_id();
+				foreach($thoughs as $row):
+					
+					echo $row->id;
+				endforeach;
 
 			if ($visited != 1)
 			{
-				$this -> load -> model('thought_model');
-				$thoughts = $this -> thought_model -> get_all_thought_ids();
-				print_r($thoughts['id']);
-				echo "<br/>";
+			
+				
 				$data = array(
 					'visited' => 1,
 					'thought' => 111

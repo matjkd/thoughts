@@ -30,9 +30,10 @@
 			}
 		}
 
-		function get_all_thought_ids()
+		function get_random_id()
 		{
 			$this -> db -> select('id');
+			$this -> db -> order_by ('id', 'random');
 			$query = $this -> db -> get('thoughts');
 
 			if ($query -> num_rows > 0)
