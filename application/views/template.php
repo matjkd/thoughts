@@ -142,8 +142,8 @@
     twitter: true
   },
   enableHover: false,
-  enableTracking: true,
-  buttons: { twitter: {via: '_JulienH'}},
+  enableTracking: false,
+  
   click: function(api, options){
     api.simulateClick();
     api.openPopup('twitter');
@@ -154,7 +154,7 @@ $('#facebook').sharrre({
     facebook: true
   },
   enableHover: false,
-  enableTracking: true,
+  enableTracking: false,
   click: function(api, options){
     api.simulateClick();
     api.openPopup('facebook');
@@ -165,7 +165,7 @@ $('#googleplus').sharrre({
     googlePlus: true
   },
   enableHover: false,
-  enableTracking: true,
+  enableTracking: false,
   click: function(api, options){
     api.simulateClick();
     api.openPopup('googlePlus');
