@@ -10,9 +10,9 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="<?=base_url()?>css/bootstrap.css" rel="stylesheet">
-    <link href="<?=base_url()?>css/bootstrap-responsive.css" rel="stylesheet">
-     <link href="<?=base_url()?>css/styles.css" rel="stylesheet">
+    <link href="<?=base_url() ?>css/bootstrap.css" rel="stylesheet">
+    <link href="<?=base_url() ?>css/bootstrap-responsive.css" rel="stylesheet">
+     <link href="<?=base_url() ?>css/styles.css" rel="stylesheet">
  
 <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
@@ -23,24 +23,26 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?=base_url()?>img/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?=base_url()?>img/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?=base_url()?>img/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="<?=base_url()?>img/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="<?=base_url()?>img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?=base_url() ?>img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?=base_url() ?>img/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?=base_url() ?>img/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="<?=base_url() ?>img/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="<?=base_url() ?>img/favicon.png">
                                    
                                    
                                    <script type="text/javascript">
+									var _gaq = _gaq || [];
+									_gaq.push(['_setAccount', 'UA-19623681-26']);
+									_gaq.push(['_trackPageview']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19623681-26']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+									(function() {
+										var ga = document.createElement('script');
+										ga.type = 'text/javascript';
+										ga.async = true;
+										ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+										var s = document.getElementsByTagName('script')[0];
+										s.parentNode.insertBefore(ga, s);
+									})();
 
 </script>
   </head>
@@ -63,7 +65,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="<?=base_url()?>">What I think of you...</a>
+            <a class="brand" href="<?=base_url() ?>">What I think of you...</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
            
           </div><!-- /.navbar-inner -->
@@ -79,10 +81,10 @@
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="<?=base_url()?>img/examples/background-1-2.jpg" alt="">
+          <img src="<?=base_url() ?>img/examples/background-1-2.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1><?=$this->load->view('welcome_message')?></h1>
+              <h1><?=$this -> load -> view('welcome_message') ?></h1>
              
             </div>
           </div>
@@ -118,28 +120,49 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<?=base_url()?>js/jquery.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-transition.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-alert.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-modal.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-dropdown.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-scrollspy.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-tab.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-tooltip.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-popover.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-button.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-collapse.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-carousel.js"></script>
-    <script src="<?=base_url()?>js/bootstrap-typeahead.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+    <script src="<?=base_url() ?>js/bootstrap.min.js"></script>
+     <script src="<?=base_url() ?>js/sharrre.min.js"></script>
     <script>
-      !function ($) {
-        $(function(){
-          // carousel demo
-          $('#myCarousel').carousel()
-        })
-      }(window.jQuery)
+		! function($) {
+			$(function() {
+				// carousel demo
+				$('#myCarousel').carousel()
+			})
+		}(window.jQuery)
+
+		jQuery(document).ready(function($) {
+			$('#demo1').sharrre({
+				share : {
+					googlePlus : true,
+					facebook : true,
+					twitter : true
+				},
+				buttons : {
+					googlePlus : {
+						size : 'tall'
+					},
+					facebook : {
+						layout : 'box_count'
+					},
+					twitter : {
+						count : 'vertical',
+						via : '_JulienH'
+					}
+				},
+				hover : function(api, options) {
+					$(api.element).find('.buttons').show();
+				},
+				hide : function(api, options) {
+					$(api.element).find('.buttons').hide();
+				},
+				enableTracking : true
+			});
+		});
     </script>
-    <script src="<?=base_url()?>js/holder/holder.js"></script>
+    
+    
+    <script src="<?=base_url() ?>js/holder/holder.js"></script>
   </body>
 </html>
 
