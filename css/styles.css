@@ -265,7 +265,7 @@ h1 {
   }
   .sharrre .count {
     color:#525b67;
-    display:block;
+    display:none;
     font-size:18px;
     font-weight:bold;
     line-height:40px;

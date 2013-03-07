@@ -63,7 +63,7 @@
           
             <a class="brand" href="<?=base_url() ?>">What I think of you...</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-           <?=$this -> load -> view('ads/horizontal-text') ?>
+           <div style="margin-top:10px" class="visible-desktop"><?=$this -> load -> view('ads/horizontal-text') ?></div>
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
 
@@ -82,11 +82,12 @@
             <div class="carousel-caption">
               <h1><?=$this -> load -> view('welcome_message') ?></h1>
              
-               <p>Share with your friends to see what I think of them. </p>
+               
 <div id="example1">
-  <div id="twitter" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Tweet"></div>
-  <div id="facebook" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Like"></div>
-  <div id="googleplus" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="+1"></div>
+	<p>Share with your friends to see what I think of them. </p>
+  <div id="twitter" data-url="http://www.whatithinkofyou.org" data-text="See what this site thinks of you #whatithinkofyou" data-title="Tweet"></div>
+  <div id="facebook" data-url="http://www.whatithinkofyou.org" data-text="See what this site thinks of you #whatithinkofyou" data-title="Like"></div>
+  <div id="googleplus" data-url="http://www.whatithinkofyou.org" data-text="See what this site thinks of you #whatithinkofyou" data-title="+1"></div>
 </div>
 
 
