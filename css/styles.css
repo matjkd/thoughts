@@ -7,6 +7,9 @@
       color: #5a5a5a;
       background-color: rgb(202, 206, 197);
     }
+    .container {
+text-align: center;
+}
 
 h1, h2, h3 {
 	font-family: "Arvo", Helvetica, Arial, sans-serif;
@@ -249,11 +252,12 @@ h1 {
 
     }
  #example1{
+ 	width:300px;
     float:left;
-    margin:0 27% 0 27%;
+    margin:0 auto;
   }
   .sharrre{
-    margin:55px 0 0 50px;
+    margin:5px 0 10px 50px;
     float:left;
   }
   .sharrre .box a:hover{

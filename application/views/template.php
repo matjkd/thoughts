@@ -82,6 +82,12 @@
             <div class="carousel-caption">
               <h1><?=$this -> load -> view('welcome_message') ?></h1>
              
+               <p>Share with your friends to see what I think of them. </p>
+<div id="example1">
+  <div id="twitter" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Tweet"></div>
+  <div id="facebook" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Like"></div>
+  <div id="googleplus" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="+1"></div>
+</div>
 
 
 
@@ -94,12 +100,7 @@
     </div><!-- /.carousel -->
     
   <div class="container sharing"> 
-  	  <p>Share with your friends to see what I think of them. </p>
-<div id="example1">
-  <div id="twitter" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Tweet"></div>
-  <div id="facebook" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Like"></div>
-  <div id="googleplus" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="+1"></div>
-</div>
+  	
 </div>
     <!-- Marketing messaging and featurettes
     ================================================== -->
@@ -138,11 +139,7 @@
 		},
 		enableHover : false,
 		enableTracking : true,
-		buttons : {
-			twitter : {
-				via : '_JulienH'
-			}
-		},
+		
 		click : function(api, options) {
 			api.simulateClick();
 			api.openPopup('twitter');
