@@ -94,7 +94,7 @@
      
     </div><!-- /.carousel -->
 
-
+<div id="demo1" data-url="http://sharrre.com" data-text="Make your sharing widget with Sharrre (jQuery Plugin)" data-title="share"></div>
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
