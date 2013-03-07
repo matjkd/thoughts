@@ -86,7 +86,12 @@
             <div class="carousel-caption">
               <h1><?=$this -> load -> view('welcome_message') ?></h1>
              
-<div id="demo1" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="share"></div>
+
+<div id="example1">
+  <div id="twitter" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Tweet"></div>
+  <div id="facebook" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Like"></div>
+  <div id="googleplus" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="+1"></div>
+</div>
 
             </div>
           </div>
@@ -132,32 +137,40 @@
 		}(window.jQuery)
 
 		jQuery(document).ready(function($) {
-			$('#demo1').sharrre({
-				share : {
-					googlePlus : true,
-					facebook : true,
-					twitter : true
-				},
-				buttons : {
-					googlePlus : {
-						size : 'tall'
-					},
-					facebook : {
-						layout : 'box_count'
-					},
-					twitter : {
-						count : 'vertical',
-						via : '_JulienH'
-					}
-				},
-				hover : function(api, options) {
-					$(api.element).find('.buttons').show();
-				},
-				hide : function(api, options) {
-					$(api.element).find('.buttons').hide();
-				},
-				enableTracking : true
-			});
+			$('#twitter').sharrre({
+  share: {
+    twitter: true
+  },
+  enableHover: false,
+  enableTracking: true,
+  buttons: { twitter: {via: '_JulienH'}},
+  click: function(api, options){
+    api.simulateClick();
+    api.openPopup('twitter');
+  }
+});
+$('#facebook').sharrre({
+  share: {
+    facebook: true
+  },
+  enableHover: false,
+  enableTracking: true,
+  click: function(api, options){
+    api.simulateClick();
+    api.openPopup('facebook');
+  }
+});
+$('#googleplus').sharrre({
+  share: {
+    googlePlus: true
+  },
+  enableHover: false,
+  enableTracking: true,
+  click: function(api, options){
+    api.simulateClick();
+    api.openPopup('googlePlus');
+  }
+});
 		});
     </script>
     
