@@ -71,7 +71,7 @@ h1 {
 
     /* Carousel base class */
     .carousel {
-      margin-bottom: 60px;
+      margin-bottom: 20px;
     }
 
     .carousel .container {
@@ -110,7 +110,7 @@ h1 {
     }
     .carousel-caption h1,
     .carousel-caption .lead {
-      margin: 0;
+      margin: 0 0 40px 0;
       line-height: 1.25;
       color: #fff;
       text-align:center;
@@ -253,7 +253,7 @@ h1 {
     }
  #example1{
  	width:300px;
-    float:left;
+    
     margin:0 auto;
   }
   .sharrre{
