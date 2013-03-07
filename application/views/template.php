@@ -128,22 +128,16 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
     <script src="<?=base_url() ?>js/bootstrap.min.js"></script>
      <script src="<?=base_url() ?>js/sharrre.min.js"></script>
-    <script>
-		! function($) {
-			$(function() {
-				// carousel demo
-				$('#myCarousel').carousel()
-			})
-		}(window.jQuery)
-
-		jQuery(document).ready(function($) {
-			$('#twitter').sharrre({
+   
+   
+   <script>
+$('#twitter').sharrre({
   share: {
     twitter: true
   },
   enableHover: false,
-  enableTracking: false,
-  
+  enableTracking: true,
+  buttons: { twitter: {via: '_JulienH'}},
   click: function(api, options){
     api.simulateClick();
     api.openPopup('twitter');
@@ -154,7 +148,7 @@ $('#facebook').sharrre({
     facebook: true
   },
   enableHover: false,
-  enableTracking: false,
+  enableTracking: true,
   click: function(api, options){
     api.simulateClick();
     api.openPopup('facebook');
@@ -165,17 +159,15 @@ $('#googleplus').sharrre({
     googlePlus: true
   },
   enableHover: false,
-  enableTracking: false,
+  enableTracking: true,
   click: function(api, options){
     api.simulateClick();
     api.openPopup('googlePlus');
   }
 });
-		});
-    </script>
+</script>
     
     
-    <script src="<?=base_url() ?>js/holder/holder.js"></script>
   </body>
 </html>
 
