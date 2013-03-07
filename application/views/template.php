@@ -64,7 +64,7 @@
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="<?=base_url()?>img/examples/slide-01.jpg" alt="">
+          <img src="<?=base_url()?>img/examples/background-1.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1><?=$this->load->view('welcome_message')?></h1>
