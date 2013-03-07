@@ -63,7 +63,7 @@
           
             <a class="brand" href="<?=base_url() ?>">What I think of you...</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-           <?=$this->load->view('ads/horizontal-text')?>
+           <?=$this -> load -> view('ads/horizontal-text') ?>
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
 
@@ -92,10 +92,14 @@
       </div>
      
     </div><!-- /.carousel -->
+    
+  <div class="container sharing"> 
+  	  <p>Share with your friends to see what I think of them. </p>
 <div id="example1">
   <div id="twitter" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Tweet"></div>
   <div id="facebook" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Like"></div>
   <div id="googleplus" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="+1"></div>
+</div>
 </div>
     <!-- Marketing messaging and featurettes
     ================================================== -->
@@ -128,41 +132,44 @@
    
    
    <script>
-            $('#twitter').sharrre({
-              share: {
-                twitter: true
-              },
-              enableHover: false,
-              enableTracking: true,
-              buttons: { twitter: {via: '_JulienH'}},
-              click: function(api, options){
-                api.simulateClick();
-                api.openPopup('twitter');
-              }
-            });
-            $('#facebook').sharrre({
-              share: {
-                facebook: true
-              },
-              enableHover: false,
-              enableTracking: true,
-              click: function(api, options){
-                api.simulateClick();
-                api.openPopup('facebook');
-              }
-            });
-            $('#googleplus').sharrre({
-              share: {
-                googlePlus: true
-              },
-              enableHover: false,
-              enableTracking: true,
-              click: function(api, options){
-                api.simulateClick();
-                api.openPopup('googlePlus');
-              }
-            });
-            
+	$('#twitter').sharrre({
+		share : {
+			twitter : true
+		},
+		enableHover : false,
+		enableTracking : true,
+		buttons : {
+			twitter : {
+				via : '_JulienH'
+			}
+		},
+		click : function(api, options) {
+			api.simulateClick();
+			api.openPopup('twitter');
+		}
+	});
+	$('#facebook').sharrre({
+		share : {
+			facebook : true
+		},
+		enableHover : false,
+		enableTracking : true,
+		click : function(api, options) {
+			api.simulateClick();
+			api.openPopup('facebook');
+		}
+	});
+	$('#googleplus').sharrre({
+		share : {
+			googlePlus : true
+		},
+		enableHover : false,
+		enableTracking : true,
+		click : function(api, options) {
+			api.simulateClick();
+			api.openPopup('googlePlus');
+		}
+	}); 
 </script>
     
     
