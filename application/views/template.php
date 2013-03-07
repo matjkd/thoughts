@@ -83,11 +83,7 @@
               <h1><?=$this -> load -> view('welcome_message') ?></h1>
              
 
-<div id="example1">
-  <div id="twitter" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Tweet"></div>
-  <div id="facebook" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Like"></div>
-  <div id="googleplus" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="+1"></div>
-</div>
+
 
             </div>
           </div>
@@ -96,7 +92,11 @@
       </div>
      
     </div><!-- /.carousel -->
-
+<div id="example1">
+  <div id="twitter" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Tweet"></div>
+  <div id="facebook" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="Like"></div>
+  <div id="googleplus" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="+1"></div>
+</div>
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -111,7 +111,7 @@
       <!-- FOOTER -->
       <footer>
        
-        <p>&copy; 2013. &middot; Disclaimer: The views of this website are probably not the views of the person that sent you the link, nor are they the 
+        <p>&copy; 2013. Disclaimer: The views of this website are probably not the views of the person that sent you the link, nor are they the 
         	views of the owner of the site. They are the views of a highly advanced artificial intelligence (or a random selection process). 
       </footer>
 
