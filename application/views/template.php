@@ -60,14 +60,10 @@
         <div class="navbar navbar-inverse">
           <div class="navbar-inner">
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+          
             <a class="brand" href="<?=base_url() ?>">What I think of you...</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-           
+           <?=$this->load->view('ads/horizontal-text')?>
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
 
