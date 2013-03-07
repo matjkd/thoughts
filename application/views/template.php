@@ -86,6 +86,8 @@
             <div class="carousel-caption">
               <h1><?=$this -> load -> view('welcome_message') ?></h1>
              
+<div id="demo1" data-url="http://www.whatithinkofyou.org" data-text="Share with your friends to see what I think of them" data-title="share"></div>
+
             </div>
           </div>
         </div>
@@ -93,8 +95,6 @@
       </div>
      
     </div><!-- /.carousel -->
-
-<div id="demo1" data-url="http://sharrre.com" data-text="Make your sharing widget with Sharrre (jQuery Plugin)" data-title="share"></div>
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
