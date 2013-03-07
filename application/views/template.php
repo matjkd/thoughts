@@ -110,8 +110,9 @@
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+       
+        <p>&copy; 2013. &middot; Disclaimer: The views of this website are probably not the views of the person that sent you the link, nor are they the 
+        	views of the owner of the site. They are the views of a highly advanced artificial intelligence (or a random selection process). 
       </footer>
 
     </div><!-- /.container -->
