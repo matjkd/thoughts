@@ -62,8 +62,7 @@
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
           
             <a class="brand" href="<?=base_url() ?>">What I think of you...</a>
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-           <!--<div style="margin-top:16px" class="visible-desktop"><?=$this -> load -> view('ads/horizontal-text') ?></div>-->
+          
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
 
