@@ -20,6 +20,11 @@ color: #fff;
 h1 {
 	font-size: 55px;
 }
+.center {
+	float:none;
+	margin-left:auto;
+	margin-right:auto;
+}
 
     /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */

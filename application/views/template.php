@@ -101,7 +101,9 @@
     </div><!-- /.carousel -->
     
   <div class="container sharing"> 
-  	
+  	<div class="span7 center">
+  		<?=$this->load->view('ads/leaderboard')?>
+  	</div>
 </div>
     <!-- Marketing messaging and featurettes
     ================================================== -->
