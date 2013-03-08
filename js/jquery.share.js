@@ -95,8 +95,8 @@
             networkDefs: {
                 facebook:{url:'http://www.facebook.com/share.php?u=|u|'},
                 //http://twitter.com/home?status=jQuery%20Share%20Social%20Media%20Plugin%20-%20Share%20to%20multiple%20social%20networks%20from%20a%20single%20form%20http://plugins.in1.com/share/demo
-                twitter:{url:'https://twitter.com/share?via=in1.com&text=|140|'},
-                linkedin:{url:'http://www.linkedin.com/shareArticle?mini=true&url=|u|&title=|t|&summary=|d|&source=in1.com'},
+                twitter:{url:'https://twitter.com/share?text=|140|'},
+                linkedin:{url:'http://www.linkedin.com/shareArticle?mini=true&url=|u|&title=|t|&summary=|d|&source=whatithinkofyou.org'},
                 in1:{url:'http://www.in1.com/cast?u=|u|',w:'490',h:'529'},
                 tumblr:{url:'http://www.tumblr.com/share?v=3&u=|u|'},
                 digg:{url:'http://digg.com/submit?url=|u|&title=|t|'},
