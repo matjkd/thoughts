@@ -63,7 +63,7 @@
           
             <a class="brand" href="<?=base_url() ?>">What I think of you...</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-           <div style="margin-top:16px" class="visible-desktop"><?=$this -> load -> view('ads/horizontal-text') ?></div>
+           <!--<div style="margin-top:16px" class="visible-desktop"><?=$this -> load -> view('ads/horizontal-text') ?></div>-->
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
 
@@ -79,7 +79,7 @@
         <div class="item active">
           <img src="<?=base_url() ?>img/examples/background-1-2.jpg" alt="">
           <div class="container">
-            <div class="carousel-caption">
+            <div class="carousel-caption center">
               <h1><?=$this -> load -> view('welcome_message') ?></h1>
              
                
