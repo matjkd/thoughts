@@ -63,7 +63,7 @@
           
             <a class="brand" href="<?=base_url() ?>">What I think of you...</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-           <div style="margin-top:10px" class="visible-desktop"><?=$this -> load -> view('ads/horizontal-text') ?></div>
+           <div style="margin-top:16px" class="visible-desktop"><?=$this -> load -> view('ads/horizontal-text') ?></div>
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
 
@@ -101,8 +101,11 @@
     </div><!-- /.carousel -->
     
   <div class="container sharing"> 
-  	<div class="span7 center">
+  	<div class="span12 center hidden-phone">
   		<?=$this->load->view('ads/leaderboard')?>
+  	</div>
+  		<div class="span12 center visible-phone">
+  		<?=$this->load->view('ads/mobile-ad')?>
   	</div>
 </div>
     <!-- Marketing messaging and featurettes
