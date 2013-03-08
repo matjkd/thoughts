@@ -13,6 +13,7 @@
     <link href="<?=base_url() ?>css/bootstrap.css" rel="stylesheet">
     <link href="<?=base_url() ?>css/bootstrap-responsive.css" rel="stylesheet">
      <link href="<?=base_url() ?>css/styles.css" rel="stylesheet">
+      <link href="<?=base_url() ?>css/share.css" rel="stylesheet">
  
 <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
@@ -84,9 +85,7 @@
                
 <div id="example1">
 	<p>Share with your friends to see what I think of them. </p>
-  <div id="twitter" data-url="http://www.whatithinkofyou.org" data-text="See what this site thinks of you #whatithinkofyou" data-title="Tweet"></div>
-  <div id="facebook" data-url="http://www.whatithinkofyou.org" data-text="See what this site thinks of you #whatithinkofyou" data-title="Like"></div>
-  <div id="googleplus" data-url="http://www.whatithinkofyou.org" data-text="See what this site thinks of you #whatithinkofyou" data-title="+1"></div>
+  <div id="mydiv"></div>
 </div>
 
 
@@ -134,44 +133,13 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
     <script src="<?=base_url() ?>js/bootstrap.min.js"></script>
-     <script src="<?=base_url() ?>js/sharrre.min.js"></script>
+     <script src="<?=base_url() ?>js/jquery.share.js"></script>
    
    
    <script>
-	$('#twitter').sharrre({
-		share : {
-			twitter : true
-		},
-		enableHover : false,
-		enableTracking : true,
-		
-		click : function(api, options) {
-			api.simulateClick();
-			api.openPopup('twitter');
-		}
-	});
-	$('#facebook').sharrre({
-		share : {
-			facebook : true
-		},
-		enableHover : false,
-		enableTracking : true,
-		click : function(api, options) {
-			api.simulateClick();
-			api.openPopup('facebook');
-		}
-	});
-	$('#googleplus').sharrre({
-		share : {
-			googlePlus : true
-		},
-		enableHover : false,
-		enableTracking : true,
-		click : function(api, options) {
-			api.simulateClick();
-			api.openPopup('googlePlus');
-		}
-	}); 
+	 $('#mydiv').share({
+        networks: ['facebook','pinterest','googleplus','twitter','linkedin','tumblr','in1','email','stumbleupon','digg']
+    });
 </script>
     
     
