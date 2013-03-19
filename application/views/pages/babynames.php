@@ -25,7 +25,10 @@
         <div class="item active">
           <img src="<?=base_url() ?>img/examples/background-1-2.jpg" alt="">
           <div class="container">
-            <div class="carousel-caption center">
+          	<div class="span4">
+          		Testing
+          	</div>
+            <div class="span8 carousel-caption center">
               <h1>	<?php foreach ($thought as $row):
 
 				echo $row -> name;
@@ -33,7 +36,7 @@
              
                
 <div id="example1">
-	<p>Share with your friends to see what I think of them. </p>
+	<p>Share with your friends  </p>
   <div id="mydiv"></div>
 </div>
 
