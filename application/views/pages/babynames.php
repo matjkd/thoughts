@@ -32,8 +32,8 @@
 
 				echo $row -> name;
 			endforeach; ?></h1>
-             <span style="color:#fff; font-size:1.8em;"><i class="icon-thumbs-up"></i></span>
-              <span style="color:#fff; font-size:1.8em; "><i class="icon-thumbs-down"></i></span>
+        <a><i class="icon-thumbs-up icon-4x"></i></a>
+             <a><i class="icon-thumbs-down icon-4x"></i></a>
 
                
 <div id="example1">
