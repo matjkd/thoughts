@@ -52,7 +52,7 @@
 
 
 
-<?=$this->load->view('pages/thoughts')?>
+<?=$this->load->view($pageload)?>
     
   </body>
 </html>

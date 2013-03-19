@@ -24,22 +24,16 @@
 		{
 
 			
-			$this -> load -> model('babynames_model');
-
-			
+			$this -> load -> model('babynames_model' );
 
 				$babyname = $this -> babynames_model -> get_random_id();
 				foreach ($babyname as $row):
 
-					$name_id = $row -> name_id;
+				$name_id = $row -> name_id;
 				endforeach;
 
-				
-			
-			$storedID = $this -> session -> userdata('babyname');
-
-			$data['thought'] = $this -> babynames_model -> get_babyname($name_id);
-		
+				$data['thought'] = $this -> babynames_model -> get_babyname($name_id);
+		$data['pageload'] = 'pages/babynames';
 			$this->load->vars($data);
 			$this -> load -> view('template');
 		}
