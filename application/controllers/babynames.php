@@ -27,7 +27,7 @@
 			$this->name();
 		}
 		
-		public function name($sex = 0) {
+		public function name($sex) {
 			
 			$this -> load -> model('babynames_model' );
 
