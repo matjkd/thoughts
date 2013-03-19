@@ -32,7 +32,7 @@
 				$name_id = $row -> name_id;
 				endforeach;
 
-				$data['thought'] = $this -> babynames_model -> get_babyname($name_id);
+				$data['thought'] = $this -> babynames_model -> get_name($name_id);
 		$data['pageload'] = 'pages/babynames';
 			$this->load->vars($data);
 			$this -> load -> view('template');
