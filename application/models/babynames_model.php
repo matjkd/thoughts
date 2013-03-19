@@ -34,8 +34,9 @@
 		{
 			$this -> db -> select('name_id');
 			
-			
+			if($sex != "n") {
 				$this->db->where('sex', $sex);
+			}
 			
 			$this -> db -> order_by ('name_id', 'random');
 			$this -> db -> limit (1);
