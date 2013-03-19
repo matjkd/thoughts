@@ -9,7 +9,11 @@
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
           
             <a class="brand" href="<?=base_url() ?>babynames">Random Baby Name Generator</a>
-          
+          <ul class="nav">
+      <li><a href="#">Boys Name</a></li>
+      <li><a href="#">Girls Name</a></li>
+    
+    </ul>
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
 
@@ -27,13 +31,13 @@
           <div class="container">
           
             <div class=" carousel-caption center">
-            	<button style="padding:10px" class="btn btn-link"><a href="">Boy</a></button><button style="padding:10px" class="btn btn-link"><a href="">Girl</a></button>
+            	<button style="padding:10px" class="btn btn-"><a href="">Boy</a></button><button style="padding:10px" class="btn btn-link"><a href="">Girl</a></button>
               <h1>	<?php foreach ($thought as $row):
 
 				echo $row -> name;
 			endforeach; ?></h1>
-        <button class="btn"><i class="icon-thumbs-up icon-4x"></i></button>
-             <button class="btn"><i class="icon-thumbs-down icon-4x"></i></button>
+        
+
 
                
 <div id="example1">
