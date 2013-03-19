@@ -28,7 +28,7 @@
 		}
 		
 		public function name($sex) {
-			
+			echo $sex;
 			$this -> load -> model('babynames_model' );
 
 				$babyname = $this -> babynames_model -> get_random_id($sex);
