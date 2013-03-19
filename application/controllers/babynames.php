@@ -46,13 +46,13 @@
 		public function like_name($id){
 			$this -> load -> model('babynames_model' );
 			$this -> babynames_model -> like_name($id);
-			$this->name('n');
+			redirect('/babynames');
 			
 		}
 public function dislike_name($id){
 			$this -> load -> model('babynames_model' );
 			$this -> babynames_model -> dislike_name($id);
-			$this->name('n');
+			redirect('/babynames');
 			
 		}
 
