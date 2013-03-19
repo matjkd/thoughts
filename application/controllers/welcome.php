@@ -47,6 +47,13 @@
 			$storedID = $this -> session -> userdata('thought');
 
 			$data['thought'] = $this -> thought_model -> get_thought($storedID);
+			foreach ($data['thought'] as $row):
+
+				$data['title'] =  $row -> thought;
+				
+				
+				
+			endforeach;
 		$data['pageload'] = 'pages/thoughts';
 			$this->load->vars($data);
 			$this -> load -> view('template');

@@ -23,37 +23,46 @@
 		public function index()
 		{
 
-			
-			$this->name('n');
+			$this -> name('n');
 		}
-		
-		public function name($sex) {
-			
-			$this -> load -> model('babynames_model' );
 
-				$babyname = $this -> babynames_model -> get_random_id($sex);
-				foreach ($babyname as $row):
+		public function name($sex)
+		{
+
+			$this -> load -> model('babynames_model');
+
+			$babyname = $this -> babynames_model -> get_random_id($sex);
+			foreach ($babyname as $row):
 
 				$name_id = $row -> name_id;
-				endforeach;
+			endforeach;
 
-				$data['thought'] = $this -> babynames_model -> get_name($name_id);
-		$data['pageload'] = 'pages/babynames';
-			$this->load->vars($data);
+			$data['thought'] = $this -> babynames_model -> get_name($name_id);
+			foreach ($data['thought'] as $row):
+				
+				$data['title'] = $row -> name;
+
+			endforeach;
+
+			$data['pageload'] = 'pages/babynames';
+			$this -> load -> vars($data);
 			$this -> load -> view('template');
 		}
-		
-		public function like_name($id){
-			$this -> load -> model('babynames_model' );
+
+		public function like_name($id)
+		{
+			$this -> load -> model('babynames_model');
 			$this -> babynames_model -> like_name($id);
 			redirect('/babynames');
-			
+
 		}
-public function dislike_name($id){
-			$this -> load -> model('babynames_model' );
+
+		public function dislike_name($id)
+		{
+			$this -> load -> model('babynames_model');
 			$this -> babynames_model -> dislike_name($id);
 			redirect('/babynames');
-			
+
 		}
 
 	}
