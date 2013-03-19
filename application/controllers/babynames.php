@@ -23,7 +23,7 @@
 		public function index()
 		{
 
-			$visited = $this -> session -> userdata('visited');
+			
 			$this -> load -> model('babynames_model');
 
 			

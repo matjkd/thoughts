@@ -26,7 +26,10 @@
           <img src="<?=base_url() ?>img/examples/background-1-2.jpg" alt="">
           <div class="container">
             <div class="carousel-caption center">
-              <h1><?=$this -> load -> view('welcome_message') ?></h1>
+              <h1>	<?php foreach ($thought as $row):
+
+				echo $row -> name;
+			endforeach; ?></h1>
              
                
 <div id="example1">
