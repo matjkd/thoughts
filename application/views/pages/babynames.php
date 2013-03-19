@@ -8,7 +8,7 @@
           <div class="navbar-inner">
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
           
-            <a class="brand" href="<?=base_url() ?>">Random Baby Name Generator</a>
+            <a class="brand" href="<?=base_url() ?>babynames">Random Baby Name Generator</a>
           
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
@@ -25,10 +25,9 @@
         <div class="item active">
           <img src="<?=base_url() ?>img/examples/background-1-2.jpg" alt="">
           <div class="container">
-          	<div class="span4">
-          		Testing
-          	</div>
-            <div class="span8 carousel-caption center">
+          
+            <div class=" carousel-caption center">
+            	<button>Boy</button><button>Girl</button>
               <h1>	<?php foreach ($thought as $row):
 
 				echo $row -> name;
