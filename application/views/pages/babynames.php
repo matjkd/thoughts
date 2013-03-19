@@ -46,10 +46,11 @@ $id = $row->name_id;
 				if($sex == 'f') { $sexclass = "female";}
 			endforeach; ?>
               <h1><span  class="<?=$sexclass?>"><?=$name?></span></h1>
+              Do you like this name?
        <a href="<?=base_url() ?>babynames/like_name/<?=$id?>"> <button class="btn"><i class="icon-thumbs-up icon-4x"></i></button></a>
       <a href="<?=base_url() ?>babynames/dislike_name/<?=$id?>"> <button class="btn"><i class="icon-thumbs-down icon-4x"></i></button></a>
 
-               
+              <br/><br/> 
 <div id="example1">
 	<p>Share with your friends  </p>
   <div id="mydiv"></div>
