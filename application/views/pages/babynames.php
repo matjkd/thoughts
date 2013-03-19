@@ -12,7 +12,7 @@
           <ul class="nav">
       <li><a href="#">Boys Name</a></li>
       <li><a href="#">Girls Name</a></li>
-    
+    <li><?=$this->load->view('ads/horizontal-text')?></li>
     </ul>
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
@@ -31,13 +31,13 @@
           <div class="container">
           
             <div class=" carousel-caption center">
-            	<button style="padding:10px" class="btn btn-"><a href="">Boy</a></button><button style="padding:10px" class="btn btn-link"><a href="">Girl</a></button>
+            	
               <h1>	<?php foreach ($thought as $row):
 
 				echo $row -> name;
 			endforeach; ?></h1>
-        
-
+        <button class="btn"><i class="icon-thumbs-up icon-4x"></i></button>
+       <button class="btn"><i class="icon-thumbs-down icon-4x"></i></button>
 
                
 <div id="example1">
