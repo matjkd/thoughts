@@ -24,7 +24,7 @@
 	.male {
 		color:#006DCC;
 	}
-	female {
+	.female {
 		color:#F8B9B7;
 	}
 </style>
