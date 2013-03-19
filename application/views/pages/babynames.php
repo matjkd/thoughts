@@ -20,14 +20,21 @@
       </div> <!-- /.container -->
     </div><!-- /.navbar-wrapper -->
 
-
+<style type="text/css">
+	.male {
+		color:#006DCC;
+	}
+	female {
+		color:#F8B9B7;
+	}
+</style>
 
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="<?=base_url() ?>img/examples/background-1-2.jpg" alt="">
+          <img src="<?=base_url() ?>img/ocean_thumb.jpg" alt="">
           <div class="container">
           
             <div class=" carousel-caption center">
@@ -38,7 +45,7 @@
 				if($sex == 'm') { $sexclass = "male";}
 				if($sex == 'f') { $sexclass = "female";}
 			endforeach; ?>
-              <h1 class="<?=$sex?>"><?=$name?></h1>
+              <h1 class="<?=$sexclass?>"><?=$name?></h1>
         <button class="btn"><i class="icon-thumbs-up icon-4x"></i></button>
        <button class="btn"><i class="icon-thumbs-down icon-4x"></i></button>
 
