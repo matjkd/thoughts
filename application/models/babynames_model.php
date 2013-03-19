@@ -30,9 +30,13 @@
 			}
 		}
 
-		function get_random_id()
+		function get_random_id($sex = 0)
 		{
 			$this -> db -> select('name_id');
+			
+			if($sex != 0) {
+				$this->db->where('sex', $sex);
+			}
 			$this -> db -> order_by ('name_id', 'random');
 			$this -> db -> limit (1);
 			$query = $this -> db -> get('babynames');

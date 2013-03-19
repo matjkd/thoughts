@@ -10,9 +10,9 @@
           
             <a class="brand" href="<?=base_url() ?>babynames">Random Baby Name Generator</a>
           <ul class="nav">
-      <li><a href="#">Boys Name</a></li>
-      <li><a href="#">Girls Name</a></li>
-    <li><?=$this->load->view('ads/horizontal-text')?></li>
+      <li><a href="<?=base_url() ?>babynames/name/m">Boys Name</a></li>
+      <li><a href="<?=base_url() ?>babynames/name/f">Girls Name</a></li>
+    
     </ul>
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
@@ -31,11 +31,14 @@
           <div class="container">
           
             <div class=" carousel-caption center">
-            	
-              <h1>	<?php foreach ($thought as $row):
+            	<?php foreach ($thought as $row):
 
-				echo $row -> name;
-			endforeach; ?></h1>
+				$name = $row -> name;
+				$sex = $row->sex;
+				if($sex == 'm') { $sexclass = "male";}
+				if($sex == 'f') { $sexclass = "female";}
+			endforeach; ?>
+              <h1 class="<?=$sex?>"><?=$name?></h1>
         <button class="btn"><i class="icon-thumbs-up icon-4x"></i></button>
        <button class="btn"><i class="icon-thumbs-down icon-4x"></i></button>
 

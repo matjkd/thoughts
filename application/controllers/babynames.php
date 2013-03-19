@@ -24,9 +24,14 @@
 		{
 
 			
+			$this->name();
+		}
+		
+		public function name($sex = 0) {
+			
 			$this -> load -> model('babynames_model' );
 
-				$babyname = $this -> babynames_model -> get_random_id();
+				$babyname = $this -> babynames_model -> get_random_id($sex);
 				foreach ($babyname as $row):
 
 				$name_id = $row -> name_id;
