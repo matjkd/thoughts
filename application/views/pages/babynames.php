@@ -32,7 +32,9 @@
 
 				echo $row -> name;
 			endforeach; ?></h1>
-             
+             <i class="icon-thumbs-up"></i>
+               <i class="icon-thumbs-down"></i>
+
                
 <div id="example1">
 	<p>Share with your friends  </p>
