@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title><?php if(isset($title)) { echo $title; } ?></title>
+    <title>Really Simple Baby Name Generator: <?php if(isset($title)) { echo $title; } ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">

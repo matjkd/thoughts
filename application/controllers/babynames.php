@@ -40,7 +40,7 @@
 			$data['thought'] = $this -> babynames_model -> get_name($name_id);
 			foreach ($data['thought'] as $row):
 				
-				$data['title'] = $row -> name;
+				$data['title'] = "Really Simple Baby Name Generator: ".$row -> name;
 
 			endforeach;
 
