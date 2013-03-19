@@ -27,13 +27,13 @@
           <div class="container">
           
             <div class=" carousel-caption center">
-            	<button class="btn">Boy</button><button class="btn">Girl</button>
+            	<button style="padding:10px" class="btn btn-link"><a href="">Boy</a></button><button style="padding:10px" class="btn btn-link"><a href="">Girl</a></button>
               <h1>	<?php foreach ($thought as $row):
 
 				echo $row -> name;
 			endforeach; ?></h1>
-        <a><i class="icon-thumbs-up icon-4x"></i></a>
-             <a><i class="icon-thumbs-down icon-4x"></i></a>
+        <button class="btn"><i class="icon-thumbs-up icon-4x"></i></button>
+             <button class="btn"><i class="icon-thumbs-down icon-4x"></i></button>
 
                
 <div id="example1">
