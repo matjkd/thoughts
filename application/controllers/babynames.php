@@ -24,7 +24,7 @@
 		{
 
 			
-			$this->name();
+			$this->name('n');
 		}
 		
 		public function name($sex) {
