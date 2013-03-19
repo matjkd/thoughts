@@ -39,15 +39,15 @@
           
             <div class=" carousel-caption center">
             	<?php foreach ($thought as $row):
-
+$id = $row->name_id;
 				$name = $row -> name;
 				$sex = $row->sex;
 				if($sex == 'm') { $sexclass = "male";}
 				if($sex == 'f') { $sexclass = "female";}
 			endforeach; ?>
-              <h1 class="<?=$sexclass?>"><?=$name?></h1>
-        <button class="btn"><i class="icon-thumbs-up icon-4x"></i></button>
-       <button class="btn"><i class="icon-thumbs-down icon-4x"></i></button>
+              <h1><span  class="<?=$sexclass?>"><?=$name?></span></h1>
+       <a href="<?=base_url() ?>babynames/like_name/<?=$id?>"> <button class="btn"><i class="icon-thumbs-up icon-4x"></i></button></a>
+      <a href="<?=base_url() ?>babynames/dislike_name/<?=$id?>"> <button class="btn"><i class="icon-thumbs-down icon-4x"></i></button></a>
 
                
 <div id="example1">
