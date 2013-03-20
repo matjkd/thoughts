@@ -54,6 +54,7 @@ $id = $row->name_id;
 <div id="example1">
 	<p>Share with your friends  </p>
   <div id="mydiv"></div>
+  <div><?=$this->load->view('ads/horizontal-text')?></div>
 </div>
 
 
