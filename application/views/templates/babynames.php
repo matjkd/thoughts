@@ -51,7 +51,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="index.html">
+            <a class="brand" href="<?=base_url()?>babynames">
                 <strong>Baby Name Generator</strong>
             </a>
             <div class="nav-collapse collapse">
