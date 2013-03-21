@@ -2,10 +2,10 @@
 <html>
 <head>
 	  <title><?php
-	if (isset($title))
-	{
-		echo $title;
-	}
+		if (isset($title))
+		{
+			echo $title;
+		}
  ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -103,16 +103,18 @@
       <a href="<?=base_url() ?>babynames/dislike_name/<?=$id ?>"> <button class="btn"><i class="icon-thumbs-down icon-4x"></i></button></a>
                 </div>
 
-                <div class="span6 count">
+                <div class="span6 count" style="margin-top:30px;">
+                	<p>Gender: <?=$sex?></p>
                   <p>Meaning: <?=$meaning ?></p>
                   <p>Origin: <?=$origin ?></p>
                 </div>
             </div>
         </div>
+     </div>
         
 <div class="social" style="margin-top:20px;">
             <div class="container">
-            	<div id="example1">
+            	<div id="example1" style="text-align:center;">
 	<p>Share with your friends  </p>
   <div id="mydiv"></div>
   
@@ -120,6 +122,9 @@
                    
             </div>
         </div>
+        
+         
+         
         <div class="email_wrapp">
             <div class="container">
                 <div class="span11 " style="padding-top:10px; height:110px;">
@@ -142,10 +147,10 @@
             </div>
             <div class="row">
                 <div class="span6 intro">
-                    <h6>The purpose of this site is to provide you with a really simple name generator, which will hopefully inspire you to come up with a name
-                    	for whatever it is you are naming...</h6>
+                    <h6>A really simple name generator, which will hopefully inspire you to come up with a name
+                    	for whatever it is you are naming.</h6>
                     <p>
-                        If there is any interest I shall continue to improve this page, with various features such as a search, breakdown by origin, a method to
+                        A few of new features on the way such as a search, breakdown by origin, a method to
                         save your favourite names, and when there is enough, some statistics. We'll also add more names of course, currently we're up to about 30,000.<br /><br />
                         <p>Please share this page if you like it and would like to see it improve... Thanks.</p>
                           </div>
@@ -156,7 +161,16 @@
         </div>
     </div>
         
-    </div>
+     <div class="email_wrapp">
+            <div class="container">
+                <div class="span11 " style="padding-top:10px; height:110px;">
+                    	<div style="text-align: center;">
+  		<?=$this -> load -> view('ads/leaderboard2') ?>
+  	</div>
+  		
+                </div>
+            </div>
+        </div>
 
     <!-- starts footer -->
     <footer id="footer">
