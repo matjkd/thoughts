@@ -42,8 +42,9 @@
 $id = $row->name_id;
 				$name = $row -> name;
 				$sex = $row->sex;
-				if($sex == 'm') { $sexclass = "male";}
-				if($sex == 'f') { $sexclass = "female";}
+				if($sex == 'Boy') { $sexclass = "male";}
+				if($sex == 'Girl') { $sexclass = "female";}
+				if($sex == 'Unisex') { $sexclass = "unisex";}
 			endforeach; ?>
               <h1><span  class="<?=$sexclass?>"><?=$name?></span></h1>
              <div><p> Do you like this name?</p></div>

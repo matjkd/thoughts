@@ -14,7 +14,7 @@
 		function get_name($id)
 		{
 			$this -> db -> where('name_id', $id);
-			$query = $this -> db -> get('babynames');
+			$query = $this -> db -> get('names');
 			if ($query -> num_rows == 1)
 			{
 				return $query -> result();
@@ -23,7 +23,7 @@
 
 		function get_all_names()
 		{
-			$query = $this -> db -> get('babynames');
+			$query = $this -> db -> get('names');
 			if ($query -> num_rows > 0)
 			{
 				return $query -> result();
@@ -43,7 +43,7 @@
 
 			$likeupdate = array('likes' => $newlike);
 			$this -> db -> where('name_id', $id);
-			$update = $this -> db -> update('babynames', $likeupdate);
+			$update = $this -> db -> update('names', $likeupdate);
 			return $update;
 
 		}
@@ -61,7 +61,7 @@
 
 			$likeupdate = array('dislikes' => $newdislike);
 			$this -> db -> where('name_id', $id);
-			$update = $this -> db -> update('babynames', $likeupdate);
+			$update = $this -> db -> update('names', $likeupdate);
 			return $update;
 		}
 
@@ -76,7 +76,7 @@
 
 			$this -> db -> order_by('name_id', 'random');
 			$this -> db -> limit(1);
-			$query = $this -> db -> get('babynames');
+			$query = $this -> db -> get('names');
 
 			if ($query -> num_rows > 0)
 			{

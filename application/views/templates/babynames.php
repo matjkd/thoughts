@@ -56,8 +56,8 @@
             </a>
             <div class="nav-collapse collapse">
                 <ul class="nav pull-right">
-                     <li><a href="<?=base_url() ?>babynames/name/m">Boys Name</a></li>
-      <li><a href="<?=base_url() ?>babynames/name/f">Girls Name</a></li>
+                     <li><a href="<?=base_url() ?>babynames/name/boy">Boys Name</a></li>
+      <li><a href="<?=base_url() ?>babynames/name/girl">Girls Name</a></li>
                 </ul>
             </div>
         </div>
@@ -73,8 +73,11 @@
 $id = $row->name_id;
 				$name = $row -> name;
 				$sex = $row->sex;
-				if($sex == 'm') { $sexclass = "male";}
-				if($sex == 'f') { $sexclass = "female";}
+				$meaning = $row->Meaning;
+				$origin = $row->Origin;
+				if($sex == 'Boy') { $sexclass = "male";}
+				if($sex == 'Girl') { $sexclass = "female";}
+				if($sex == 'Unisex') { $sexclass = "unisex";}
 			endforeach; ?>
               <h1><span  class="<?=$sexclass?>"><?=$name?></span></h1>
              <div><p> Do you like this name?</p></div>
@@ -83,7 +86,8 @@ $id = $row->name_id;
                 </div>
 
                 <div class="span6 count">
-                   &nbsp;
+                  <p>Meaning: <?=$meaning?></p>
+                  <p>Origin: <?=$origin?></p>
                 </div>
             </div>
         </div>
