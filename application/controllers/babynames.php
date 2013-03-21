@@ -46,7 +46,7 @@
 
 			$data['pageload'] = 'pages/babynames';
 			$this -> load -> vars($data);
-			$this -> load -> view('template');
+			$this -> load -> view('templates/babynames');
 		}
 
 		public function like_name($id)
