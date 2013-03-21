@@ -37,8 +37,11 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-
+if ($_SERVER['HTTP_HOST']=="www.simplenamegenerator.co.uk") {
+    $route['default_controller'] = "babynames"; 
+} else {
 $route['default_controller'] = "welcome";
+}
 $route['404_override'] = '';
 
 

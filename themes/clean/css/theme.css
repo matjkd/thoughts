@@ -6,7 +6,7 @@ body {
 	background: #DDDCE2 url(../img/body_bg.jpg) repeat left top;
 	-webkit-font-smoothing: antialiased;
 	font-family: 'Lato', sans-serif !important;
-	padding-top: 107px;
+	padding-top: 0px;
 }
 @media (max-width: 979px) {
 	body { padding-top: 0 !important; }
@@ -93,7 +93,7 @@ header {
 
 .section_header {
 	width: 100%;
-	margin-bottom: 60px;
+	margin-bottom: 10px;
 }
 .section_header h3 {
 	color: rgb(100, 100, 100);
