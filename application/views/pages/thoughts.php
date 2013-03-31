@@ -1,7 +1,9 @@
     <!-- NAVBAR
     ================================================== -->
     <div class="container">
-    	<?=$this->load->view('ads/leaderboard')?>
+    	<div class="span12 center hidden-phone">
+  		<?=$this->load->view('ads/leaderboard2')?>
+  	</div>
     </div>
    
 
