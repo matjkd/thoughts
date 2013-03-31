@@ -1,20 +1,9 @@
     <!-- NAVBAR
     ================================================== -->
-    <div class="navbar-wrapper">
-      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-      <div class="container">
-
-        <div class="navbar navbar-inverse">
-          <div class="navbar-inner">
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-          
-            <a class="brand" href="<?=base_url() ?>">What I think of you...</a>
-          
-          </div><!-- /.navbar-inner -->
-        </div><!-- /.navbar -->
-
-      </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
+    <div class="container">
+    	<?=$this->load->view('ads/leaderboard')?>
+    </div>
+   
 
 
 
@@ -30,7 +19,7 @@
              
                
 <div id="example1">
-	<p>Share with your friends to see what I think of them. </p>
+	<p>That's what I think of you. My opinion of your friends is different. </p>
   <div id="mydiv"></div>
 </div>
 
