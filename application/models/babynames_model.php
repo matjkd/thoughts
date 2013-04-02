@@ -33,7 +33,8 @@
 		function like_name($id)
 		{
 			$name = $this -> get_name($id);
-			foreach ($name as $row):
+			foreach ($name as $row)
+			:
 
 				$liked = $row -> likes;
 
@@ -51,7 +52,8 @@
 		function dislike_name($id)
 		{
 			$name = $this -> get_name($id);
-			foreach ($name as $row):
+			foreach ($name as $row)
+			:
 
 				$disliked = $row -> dislikes;
 
@@ -65,8 +67,27 @@
 			return $update;
 		}
 
+		function findname($id)
+		{
+
+			$this -> db -> where('name_id', $id);
+			
+			$query = $this -> db -> get('names');
+			if ($query -> num_rows() > 0)
+			{
+				foreach ($query->result() as $row)
+				{
+					return $row;
+					
+				}
+			}
+		}
+		
+		
+
 		function get_random_id($sex)
 		{
+
 			$this -> db -> select('name_id');
 
 			if ($sex != "n")

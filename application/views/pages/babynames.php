@@ -1,9 +1,19 @@
+   <div class="container">
+   	
+   	<div class="row">
+<div class="span12 center hidden-phone">
+  		<?=$this->load->view('ads/leaderboard2')?>
+  	</div>
+   	
+   </div>
+   
     <!-- NAVBAR
     ================================================== -->
     <div class="navbar-wrapper">
       <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
       <div class="container">
-
+      	
+  	</div>
         <div class="navbar navbar-inverse">
           <div class="navbar-inner">
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->

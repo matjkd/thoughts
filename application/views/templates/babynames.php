@@ -33,30 +33,32 @@
 		}
 </style>
  <script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-19623681-26']);
+	_gaq.push(['_setDomainName', 'whatithinkofyou.org']);
+	_gaq.push(['_setAllowLinker', true]);
+	_gaq.push(['_trackPageview']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19623681-26']);
-  _gaq.push(['_setDomainName', 'whatithinkofyou.org']);
-  _gaq.push(['_setAllowLinker', true]);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
 
 </script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-static-top">
+	
+	<div class="navbar navbar-inverse navbar-static-top">
       <div class="navbar-inner">
+  
         <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
+        		<div class="row">
+
+         
             <a class="brand" href="<?=base_url() ?>babynames">
                 <strong>Baby Name Generator</strong>
             </a>
@@ -68,7 +70,7 @@
             </div>
         </div>
       </div>
-    </div>
+    </div></div>
 
     <!-- Sign In Option 1 -->
     <div id="coming_soon">
@@ -98,15 +100,34 @@
 					endforeach;
  ?>
               <h1><span  class="<?=$sexclass ?>"><?=$name ?></span></h1>
+              <p>Gender: <?=$sex ?></p>
+                  <p>Meaning: <?=$meaning ?></p>
+                  <p>Origin: <?=$origin ?></p>
              <div><p> Do you like this name?</p></div>
        <a href="<?=base_url() ?>babynames/like_name/<?=$id ?>"> <button class="btn"><i class="icon-thumbs-up icon-4x"></i></button></a>
       <a href="<?=base_url() ?>babynames/dislike_name/<?=$id ?>"> <button class="btn"><i class="icon-thumbs-down icon-4x"></i></button></a>
                 </div>
 
                 <div class="span6 count" style="margin-top:30px;">
-                	<p>Gender: <?=$sex?></p>
-                  <p>Meaning: <?=$meaning ?></p>
-                  <p>Origin: <?=$origin ?></p>
+                	
+                	<?php   foreach($namesarray as $row): ?>
+                		
+                		<?php 
+                		if(isset($row->name)) {
+							if ($row -> sex == "Girl")
+							{
+								$btnclass = "btn-danger";
+							}
+							else
+							{
+								$btnclass = "btn-info";
+							}
+						
+						?>
+                		<span class="btn <?=$btnclass ?>"><?=$row -> name ?></span>
+                		 <?php } ?>
+                		
+                		<?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -127,7 +148,7 @@
          
         <div class="email_wrapp">
             <div class="container">
-                <div class="span11 " style="padding-top:10px; height:110px;">
+                <div class="span12 " style="padding-top:10px; height:110px;">
                     	<div style="text-align: center;">
   		<?=$this -> load -> view('ads/leaderboard') ?>
   	</div>
@@ -146,7 +167,7 @@
                 <h3>About the Baby Name Generator</h3>
             </div>
             <div class="row">
-                <div class="span6 intro">
+                <div class="span12 intro">
                     <h6>A really simple name generator, which will hopefully inspire you to come up with a name
                     	for whatever it is you are naming.</h6>
                     <p>
@@ -154,9 +175,7 @@
                         save your favourite names, and when there is enough, some statistics. We'll also add more names of course, currently we're up to about 30,000.<br /><br />
                         <p>Please share this page if you like it and would like to see it improve... Thanks.</p>
                           </div>
-                <div class="span6 ">
-                         &nbsp;               
-                </div>
+               
             </div>
         </div>
     </div>

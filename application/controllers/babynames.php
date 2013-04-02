@@ -32,17 +32,31 @@
 			$this -> load -> model('babynames_model');
 
 			$babyname = $this -> babynames_model -> get_random_id($sex);
-			foreach ($babyname as $row):
+			foreach ($babyname as $row)
+			:
 
 				$name_id = $row -> name_id;
 			endforeach;
 
 			$data['thought'] = $this -> babynames_model -> get_name($name_id);
-			foreach ($data['thought'] as $row):
-				
-				$data['title'] = "Really Simple Baby Name Generator: ".$row -> name;
+			foreach ($data['thought'] as $row)
+			:
+
+				$data['title'] = "Really Simple Baby Name Generator: " . $row -> name;
 
 			endforeach;
+			$data['likednames'] = $this -> session -> userdata('liked');
+			$data['likedarray'] = explode(",", $data['likednames']);
+
+			foreach ($data['likedarray'] as $row):
+
+				$namesarray[] = $this -> babynames_model -> findname($row);
+				
+			endforeach;
+
+if($namesarray != NULL) {
+			$data['namesarray'] = $namesarray;
+}
 
 			$data['pageload'] = 'pages/babynames';
 			$this -> load -> vars($data);
@@ -53,6 +67,20 @@
 		{
 			$this -> load -> model('babynames_model');
 			$this -> babynames_model -> like_name($id);
+			$liked = $this -> session -> userdata('liked');
+
+			if ($liked == NULL)
+			{
+				$idappend = $id;
+			}
+			else
+			{
+				$idappend = $liked . ", " . $id;
+			}
+
+			$data = array('liked' => $idappend);
+
+			$this -> session -> set_userdata($data);
 			redirect('/babynames');
 
 		}

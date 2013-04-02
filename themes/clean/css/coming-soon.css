@@ -4,8 +4,8 @@
 #coming_soon .head{
 	background: url("../img/backgrounds/color-splash.jpg") no-repeat;
 	display: block;
-	padding-top: 160px;
-	height: 288px;
+	padding-top: 20px;
+	padding-bottom:20px;
 	width: 100%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

@@ -34,7 +34,9 @@
       </div>
      
     </div><!-- /.carousel -->
-    
+    <div class="container sharing"> 
+	<h4>Are you looking for a baby name? try this simple name generator <a href="http://simplenamegenerator.co.uk">simplenamegenerator.co.uk</a></h4>
+</div>
   <div class="container sharing"> 
   	<div class="span12 center hidden-phone">
   		<?=$this->load->view('ads/leaderboard')?>
@@ -43,6 +45,9 @@
   		<?=$this->load->view('ads/mobile-ad')?>
   	</div>
 </div>
+
+
+
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
