@@ -175,7 +175,7 @@
                     	for whatever it is you are naming.</h6>
                     <p>
                         A few of new features on the way such as a search, breakdown by origin, a method to
-                        save your favourite names, and when there is enough, some statistics. We'll also add more names of course, currently we're up to about 30,000.<br /><br />
+                        save your favourite names, and when there is enough, some statistics. We'll also add more names of course, currently we're up to <?=$countnames?><br /><br />
                         <p>Please share this page if you like it and would like to see it improve... Thanks.</p>
                           </div>
                
