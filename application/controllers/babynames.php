@@ -32,6 +32,8 @@
 			$this -> load -> model('babynames_model');
 
 			$babyname = $this -> babynames_model -> get_random_id($sex);
+			
+			$data['countnames'] = $this->babynames_model->countnames();
 			foreach ($babyname as $row)
 			:
 

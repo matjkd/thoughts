@@ -10,6 +10,13 @@
 		{
 			parent::__construct();
 		}
+		
+		function countnames() {
+			$this->db->from('names');
+			$query = $this->db->count_all_results();
+			return $query;
+			
+		}
 
 		function get_name($id)
 		{

@@ -75,7 +75,10 @@
     <!-- Sign In Option 1 -->
     <div id="coming_soon">
         <div class="head">
+        	
+        	
             <div class="container">
+            	<div class="row" style="text-align:center; color:#fff;"><h3>There are currently <?=$countnames?> names in our database</h3></div>
                 <div class="span6 text">
                    <?php
 					foreach ($thought as $row)
