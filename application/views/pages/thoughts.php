@@ -41,6 +41,7 @@
     <div class="container sharing"> 
     	<div class="row well">
 	<h4>Submit an Opinion</h4>
+	<p>An insult or compliment, it's up to you. If acceptable, it'll be added to the database.</p>
 	
 	<?=form_open('welcome/submit_opinion') ?>
 	
