@@ -58,6 +58,7 @@
 
 if($namesarray != NULL) {
 			$data['namesarray'] = $namesarray;
+	
 }
 
 			$data['pageload'] = 'pages/babynames';

@@ -30,7 +30,8 @@
 			{
 
 				$thoughts = $this -> thought_model -> get_random_id();
-				foreach ($thoughts as $row):
+				foreach ($thoughts as $row)
+				:
 
 					$thought_id = $row -> id;
 				endforeach;
@@ -43,20 +44,48 @@
 				$this -> session -> set_userdata($data);
 
 			}
-			
+
 			$storedID = $this -> session -> userdata('thought');
 
 			$data['thought'] = $this -> thought_model -> get_thought($storedID);
-			foreach ($data['thought'] as $row):
+			foreach ($data['thought'] as $row)
+			:
 
-				$data['title'] =  $row -> thought;
-				
-				
-				
+				$data['title'] = $row -> thought;
+
 			endforeach;
-		$data['pageload'] = 'pages/thoughts';
-			$this->load->vars($data);
+			$data['pageload'] = 'pages/thoughts';
+			$this -> load -> vars($data);
 			$this -> load -> view('template');
+		}
+
+		public function submit_opinion()
+		{
+			$this -> load -> model('thought_model');
+			$this -> form_validation -> set_rules('opinion', 'opinion', 'trim|required|xxs_clean');
+			if ($this -> form_validation -> run() == FALSE)
+			{
+				redirect('/');
+			}
+			else
+			{
+
+				if (set_value('opinion') != NULL)
+				{
+					$data['opinion'] = set_value('opinion');
+					$this -> thought_model -> add_opinion($data['opinion']);
+				}
+				else
+				{
+					redirect('/');
+				}
+			}
+
+			$data['title'] = "Opinion Submitted: " . $data['opinion'];
+			$data['pageload'] = 'pages/thoughts/submitted';
+			$this -> load -> vars($data);
+			$this -> load -> view('template');
+
 		}
 
 	}

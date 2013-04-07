@@ -2,7 +2,7 @@
     ================================================== -->
     <div class="container">
     	<div class="span12 center hidden-phone">
-  		<?=$this->load->view('ads/leaderboard2')?>
+  		<?=$this -> load -> view('ads/leaderboard2') ?>
   	</div>
     </div>
    
@@ -27,22 +27,38 @@
 
 
 
+
+
             </div>
           </div>
         </div>
        
       </div>
+      
+     
      
     </div><!-- /.carousel -->
     <div class="container sharing"> 
-	<h4>Are you looking for a baby name? try this simple name generator <a href="http://simplenamegenerator.co.uk">simplenamegenerator.co.uk</a></h4>
+    	<div class="row well">
+	<h4>Submit an Opinion</h4>
+	
+	<?=form_open('welcome/submit_opinion') ?>
+	
+	<input type="text" name="opinion" placeholder="what you think of someone" ><br/>
+	
+	
+	<button type="submit" name="submit" value="submit" class="btn btn-info btn-large">
+					Submit
+				</button>
+				<?=form_close() ?>
+	</div>
 </div>
   <div class="container sharing"> 
   	<div class="span12 center hidden-phone">
-  		<?=$this->load->view('ads/leaderboard')?>
+  		<?=$this -> load -> view('ads/leaderboard') ?>
   	</div>
   		<div class="span12 center visible-phone">
-  		<?=$this->load->view('ads/mobile-ad')?>
+  		<?=$this -> load -> view('ads/mobile-ad') ?>
   	</div>
 </div>
 
@@ -79,8 +95,8 @@
    
    
    <script>
-	 $('#mydiv').share({
-        networks: ['facebook','pinterest','googleplus','twitter','linkedin','tumblr','in1','email','stumbleupon','digg']
-    });
+	$('#mydiv').share({
+		networks : ['facebook', 'pinterest', 'googleplus', 'twitter', 'linkedin', 'tumblr', 'in1', 'email', 'stumbleupon', 'digg']
+	}); 
 </script>
     

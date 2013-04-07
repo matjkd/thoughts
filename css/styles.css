@@ -6,6 +6,8 @@
       padding-bottom: 40px;
       color: #5a5a5a;
       background-color: rgb(202, 206, 197);
+      background: url('../img/textures/diagonal-noise_@2X.png');	
+background-size: 100px 100px;
     }
     .container {
 text-align: center;

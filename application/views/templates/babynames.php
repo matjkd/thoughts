@@ -9,7 +9,23 @@
  ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	 <meta name="description" content="Really simple, really awesome baby name generator. ">
+	 <meta name="description" content="
+<?php   foreach($namesarray as $row): ?>
+                		
+                		<?php 
+                		if(isset($row->name)) {
+							
+						?>
+                		<?=$row -> name ?> (<?=$row -> sex ?>) 
+                		 <?php } else {
+                		 	
+							echo "Really simple, really awesome baby name generator.";
+                		 } ?>
+                		
+                		<?php endforeach; ?>
+
+
+">
 	
     <!-- Styles -->
     <link href="<?=base_url() ?>themes/clean/css/bootstrap.css" rel="stylesheet">
@@ -171,8 +187,7 @@
             </div>
             <div class="row">
                 <div class="span12 intro">
-                    <h6>A really simple name generator, which will hopefully inspire you to come up with a name
-                    	for whatever it is you are naming.</h6>
+                    <h6>A really simple name generator</h6>
                     <p>
                         A few of new features on the way such as a search, breakdown by origin, a method to
                         save your favourite names, and when there is enough, some statistics. We'll also add more names of course, currently we're up to <?=$countnames?><br /><br />
