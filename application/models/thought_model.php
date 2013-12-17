@@ -20,6 +20,9 @@
 			{
 				return $query -> result();
 			}
+			else {
+				return 1;
+			}
 		}
 
 		function get_all_thoughts()
