@@ -46,6 +46,10 @@
 			}
 
 			$storedID = $this -> session -> userdata('thought');
+			
+			if($storedID == NULL) {
+				$storedID = 1;
+			}
 
 			$data['thought'] = $this -> thought_model -> get_thought($storedID);
 			foreach ($data['thought'] as $row)

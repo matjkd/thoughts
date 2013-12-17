@@ -21,7 +21,7 @@
              
                
 <div id="example1">
-	<p>That's what I think of you. My opinion of your friends is different. </p>
+	<p>That's what I think of you. My opinion of your friends is different... </p>
   <div id="mydiv"></div>
 </div>
 
