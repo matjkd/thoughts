@@ -47,8 +47,8 @@
 
 			$storedID = $this -> session -> userdata('thought');
 			
-			if($storedID == NULL) {
-				$storedID = 1;
+			if($storedID < 1) {
+				$storedID = 2;
 			}
 
 			$data['thought'] = $this -> thought_model -> get_thought($storedID);
